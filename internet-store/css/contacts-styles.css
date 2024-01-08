@@ -1,0 +1,359 @@
+.contacts-head {
+  margin-bottom: 0;
+}
+.contacts-head .catalog-head-box {
+  width: 239px;
+  height: 96px;
+
+}
+.contacts-head .catalog-head-header {
+  width: 239px;
+  height: 59px;
+  
+}
+.contacts-head .catalog-head-path {
+  width: 176px;
+  height: 20px;
+}
+.contacts-head .catalog-head-path-home-catalog {
+  width: 77px;
+  height: 100%;
+}
+
+.contacts-fullbox {
+  display: flex;
+  width: 1236px;
+  margin: 60px auto 100px auto;
+}
+  .contacts-textbox {
+    display: flex;
+    flex-direction: column;
+    width: 618px;
+  }
+    .contacts-textbox-header {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 44px;
+      height: 88px;
+      width: 400px;
+      margin-bottom: 20px;
+    }
+    .contacts-textbox-txt {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 29px;
+    }
+    .contacts-textbox-txt b {
+      font-weight: 500;
+    }
+  .contacts-inputbox {
+    padding-left: 18px;
+    width: 618px;
+    overflow: hidden;
+  }
+    .contacts-input-underbox {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+    }
+      .contacts-input-items-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+        .contacts-input-items-label {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+        .contacts-input {
+          width: 100%;
+          height: 75px;
+          border: 1px solid #9f9f9f;
+          border-radius: 10px;
+          padding: 28px 30px 27px 30px;
+          font-size: 16px;
+          font-weight: 400;
+          background-color: white;
+        }
+        .contacts-input::placeholder {
+          color: #9f9f9f;
+        }
+        .contacts-textarea-box {
+          width: 100%;
+          height: 120px;
+          overflow: hidden;
+          border: 1px solid #9f9f9f;
+          border-radius: 10px;
+        }
+        .contacts-textarea {
+          margin: 28px 30px 28px 30px;
+          width: 540px;
+          height: 64px;
+          border: none;
+          font-size: 16px;
+          font-weight: 400;
+          resize: none;
+          overflow: auto;
+        }
+      .contacts-submit-btn {
+        cursor: pointer;
+        background-color: #18CDCA;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        width: 265px;
+        height: 55px;
+      }
+
+
+
+
+
+
+
+@media screen and (max-width: 1300px) and (min-width: 810px) {
+  .contacts-head .catalog-head-box {
+    width: 239px;
+    height: 96px;
+  }
+  .contacts-head .catalog-head-header {
+    width: 239px;
+    height: 59px;
+    
+  }
+  .contacts-head .catalog-head-path {
+    width: 176px;
+    height: 20px;
+  }
+  .contacts-head .catalog-head-path-home-catalog {
+    width: 77px;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .contacts-fullbox {
+    display: flex;
+    width: calc(1236vw / 13);
+    margin: calc(60vw / 13) auto calc(100vw / 13) auto;
+  }
+    .contacts-textbox {
+      display: flex;
+      flex-direction: column;
+      width: calc(618vw / 13);
+    }
+      .contacts-textbox-header {
+        font-size: calc(36vw / 13);
+        font-weight: 600;
+        line-height: calc(44vw / 13);
+        height: calc(88vw / 13);
+        width: calc(400vw / 13);
+        margin-bottom: calc(20vw / 13);
+      }
+      .contacts-textbox-txt {
+        font-size: calc(24vw / 13);
+        font-weight: 300;
+        line-height: calc(29vw / 13);
+      }
+      .contacts-textbox-txt b {
+        font-weight: 500;
+      }
+    .contacts-inputbox {
+      padding-left: calc(18vw / 13);
+      width: calc(618vw / 13);
+      overflow: hidden;
+    }
+      .contacts-input-underbox {
+        display: flex;
+        flex-direction: column;
+        gap: calc(25vw / 13);
+        width: 100%;
+      }
+        .contacts-input-items-box {
+          display: flex;
+          flex-direction: column;
+          gap: calc(15vw / 13);
+          width: 100%;
+        }
+          .contacts-input-items-label {
+            font-size: calc(16vw / 13);
+            font-weight: 500;
+            line-height: calc(20vw / 13);
+          }
+          .contacts-input {
+            width: 100%;
+            border: 1px solid #9f9f9f;
+            border-radius: calc(10vw / 13);
+            padding: calc(28vw / 13) calc(30vw / 13) calc(27vw / 13) calc(30vw / 13);
+            font-size: calc(16vw / 13);
+            font-weight: 400;
+            background-color: white;
+            height: calc(75vw / 13);
+          }
+          .contacts-input::placeholder {
+            color: #9f9f9f;
+          }
+          .contacts-textarea-box {
+            width: 100%;
+            height: calc(120vw / 13);
+            overflow: hidden;
+            border: 1px solid #9f9f9f;
+            border-radius: calc(10vw / 13);
+          }
+          .contacts-textarea {
+            margin: calc(28vw / 13) calc(30vw / 13);
+            width: calc(540vw / 13);
+            height: calc(64vw / 13);
+            border: none;
+            font-size: calc(16vw / 13);
+            font-weight: 400;
+            resize: none;
+            overflow: auto;
+          }
+        .contacts-submit-btn {
+          cursor: pointer;
+          background-color: #18CDCA;
+          border-radius: calc(10vw / 13);
+          color: white;
+          font-size: calc(20vw / 13);
+          font-weight: 500;
+          width: calc(265vw / 13);
+          height: calc(55vw / 13);
+        }
+}
+@media screen and (max-width: 810px) {
+  .contacts-head .catalog-head-box {
+    margin: 5vw 0 5vw 0;
+  }
+  .contacts-head .catalog-head-header {
+        width: 24vw;
+        height: 5.8vw;
+        font-size: 4.8vw;
+        font-weight: 500;
+        margin-bottom: 0.8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contacts-head .catalog-head-path {
+        width: 28.6vw;
+        height: 3.4vw;
+        align-items: center;
+    }
+    .contacts-head .catalog-head-path-home {
+        font-size: 2.8vw;
+        width: 11.8vw;
+        height: 3.4vw;
+      }
+      .contacts-head .path-arrow {
+        background-size: 1.36vw 2.38vw;
+        height: 3.4vw;
+        width: 3.4vw;
+      }
+      .contacts-head .catalog-head-path-home-catalog {
+        width: 13.4vw;
+        height: 3.4vw;
+        font-size: 2.8vw;
+        font-weight: 300;
+      }
+
+
+
+
+
+
+      .contacts-fullbox {
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+        margin: 5vw auto 10vw auto;
+        gap: 10vw;
+      }
+        .contacts-textbox {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+          .contacts-textbox-header {
+            font-size: 4.8vw;
+            font-weight: 600;
+            line-height: 5.8vw;
+            height: 11.6vw;
+            width: 51.2vw;
+            margin-bottom: 5vw;
+          }
+          .contacts-textbox-txt {
+            font-size: 3.2vw;
+            font-weight: 300;
+            line-height: 4vw;
+          }
+          .contacts-textbox-txt b {
+            font-weight: 500;
+          }
+        .contacts-inputbox {
+          padding-left: 0;
+          width: 100%;
+          overflow: hidden;
+        }
+          .contacts-input-underbox {
+            display: flex;
+            flex-direction: column;
+            gap: 4vw;
+            width: 100%;
+          }
+            .contacts-input-items-box {
+              display: flex;
+              flex-direction: column;
+              gap: 2vw;
+              width: 100%;
+            }
+              .contacts-input-items-label {
+                font-size: 3.2vw;
+                font-weight: 500;
+                line-height: 4vw;
+              }
+              .contacts-input {
+                width: 100%;
+                height: 10vw;
+                border: 1px solid #9f9f9f;
+                border-radius: 2vw;
+                padding: 3vw 4vw;
+                font-size: 3.2vw;
+                font-weight: 400;
+                background-color: white;
+              }
+              .contacts-input::placeholder {
+                color: #9f9f9f;
+              }
+              .contacts-textarea-box {
+                width: 100%;
+                height: 20vw;
+                overflow: hidden;
+                border: 1px solid #9f9f9f;
+                border-radius: 2vw;
+              }
+              .contacts-textarea {
+                margin: 3vw 4vw 3vw 4vw;
+                width: 82vw;
+                height: 14vw;
+                border: none;
+                font-size: 3.2vw;
+                font-weight: 400;
+                resize: none;
+                overflow: auto;
+              }
+            .contacts-submit-btn {
+              cursor: pointer;
+              background-color: #18CDCA;
+              border-radius: 2vw;
+              color: white;
+              font-size: 4vw;
+              font-weight: 500;
+              width: 100%;
+              height: 10vw;
+            }
+      
+}

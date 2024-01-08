@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dirigible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base-prod.css">
+    <style>
+      /* Custom CSS for slider */
+      .prod-desktop-wrapper .splide {
+        width: 80px;
+        height: 550px;
+      }
+  
+      .prod-desktop-wrapper .mini-photoes-slide {
+        height: 80px;
+        width: 80px;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .prod-desktop-wrapper .splide__track {
+        width: 80px;
+        height: 550px;
+        cursor: grab;
+      }
+      @media screen and (max-width: 1300px){
+        .prod-desktop-wrapper .splide {
+        width: 6.15vw;
+      }
+  
+      .prod-desktop-wrapper .mini-photoes-slide {
+        height: 6.15vw;
+        width: 6.15vw;
+        border-radius: 0.77vw;
+        max-height: 6.15vw;
+        max-height: 6.15vw;
+        max-width: 6.15vw;
+        max-width: 6.15vw;
+        margin-bottom: 2.46vw !important;
+      }
+      .prod-desktop-wrapper .mini-photoes-slide:not(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), :nth-child(5)) {
+        display: none;
+      }
+      .prod-desktop-wrapper .splide__track {
+        width: 6.15vw;
+      }
+      }
+
+
+
+      .prod-mobile-wrapper .splide {
+        width: 90vw;
+        height: 16vw;
+        transition: .01s;
+      }
+  
+      .prod-mobile-wrapper .mini-photoes-slide {
+        height: 16vw;
+        width: 16vw;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        border-radius: 2vw;
+        cursor: pointer;
+        transition: .01s;
+      }
+      .prod-mobile-wrapper .splide__track {
+        width: 90vw;
+        height: 16vw;
+        cursor: grab;
+        transition: .01s;
+      }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product-styles.css">
+</head>
+<body>
+    <div class="full-wrapper">
+        <main class="main">
+            <div class="full-black" style="transition: opacity .3s"></div>
+            <div class="notification-box">
+                <span class="notification-txt">
+                    Товар добавлен в корзину!
+                </span>
+                <div class="notification-cross">
+                    <!-- background-image -->
+                </div>
+            </div>
+            <section class="header-wrapper">
+                <header class="header">
+                    <div class="header-hidden-lines">
+                        
+                    </div>
+                    <a href="index.html">
+                        <div class="header-logo">
+                            <!-- background-image -->
+                        </div>
+                    </a>
+                    <div class="header-options">
+                        <form action="" class="searchh hidden header-option header-hidden-search">
+                            <input type="text" class="search-area" placeholder="Введите название товара, артикул или категорию">
+                            <div class="search-cross">
+                                <!-- background-image -->
+                            </div>
+                        </form>
+                        <div class="header-option home"><a href="index.html">Главная</a></div>
+                        <div class="header-option active-header-option catalog"><a href="catalog.html">Каталог</a></div>
+                        <div class="header-option reviews"><a href="index.html#head-reviews">Отзывы</a></div>
+                        <div class="header-option about"><a href="index.html#about-txtt">О нас</a></div>
+                        <div class="header-option contacts">Контакты</div>
+                    </div>
+                    <div class="header-icons">
+                        <div class="header-icon profile">               <!-- background-image --></div>
+                        <div class="header-icon search">                <!-- background-image --></div>
+                        <div class="header-icon fav">                   <!-- background-image --></div>
+                        <div class="header-icon cart">                  <!-- background-image --></div>
+                    </div>
+                    <div class="hidden-cart">
+                        <!-- background-image -->
+                    </div>
+                    <div class="under-menu-wrapper">
+                        <div class="under-menu" style="min-height: 0;">
+                            <div class="under-menu-header-option under-menu-home"><a href="index.html">Главная</a></div>
+                            <div class="under-menu-header-option active-under-menu-header-option under-menu-catalog"><a href="catalog.html">Каталог</a></div>
+                            <div class="under-menu-header-option under-menu-reviews">Отзывы</div>
+                            <div class="under-menu-header-option under-menu-about">О нас</div>
+                            <div class="under-menu-header-option under-menu-contacts">Контакты</div>
+                            <div class="hidden-divide-line"><!-- background-color --></div>
+                            <div class="under-menu-header-option under-menu-fav">Избранное</div>
+                            <div class="under-menu-header-option under-menu-profile">Профиль</div>
+                            <div class="hidden-divide-line"><!-- background-color --></div>
+                            <form action="" class="searchh under-menu-search">
+                                <input type="text" class="under-menu-search-area search-area" placeholder="Поиск">
+                                <div class="search-icon">
+                                    <!-- background-image -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <section class="prod-desktop-wrapper">
+                <div class="prod-path">
+                    <div class="prod-path-box">
+                        <div class="prod-path-box-items">
+                            <div class="prod-path-box-home prod-path-box-item">
+                                <span><a href="index.html">Главная</a></span>
+                            </div>
+                            <div class="prod-path-box-arrow">
+                                <!-- background-image -->
+                            </div>
+                            <div class="prod-path-box-catalog prod-path-box-item">
+                                <span><a href="products-list.html">Каталог</a></span>
+                            </div>
+                            <div class="prod-path-box-arrow">
+                                <!-- background-image -->
+                            </div>
+                            <div class="prod-path-box-tactile prod-path-box-item">
+                                <span><a href="product.html">Тактильная дорожка "Следы", 5 пар. Сенсорный коврик rrrr rrr rr rr rrrrrrr rrrrr rrrr rrrrrrrr rrr rrrrr rrrrrrr rrrr rrrrrr rrrrr r r rrrrrr r rrrrrr</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-wrapper">
+                    <div class="splide mini-photoes">
+                        <div class="splide__track">
+                            <ul class="splide__list"  style="transition: none;">
+                                <li class="splide__slide mini-photoes-slide slide slide-1"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-2"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-3"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-4"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-5"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-6"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-7"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-8"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="big-photo" style="background-image: url('./img/big-photo.jpg')">
+                        <!-- background-image -->
+                    </div>
+                    <div class="prod-txt-box">
+                        <div class="prod-txt-header">
+                            <span>Тактильная дорожка "Следы", 5 пар. Сенсорный коврик</span>
+                        </div>
+                        <div class="prod-txt-price">
+                            <span>3 909 ₽</span>
+                        </div>
+                        <div class="prod-txt-rating">
+                            <div class="prod-txt-rating-stars">
+                                <!-- background-image -->
+                            </div>
+                            <div class="prod-txt-rating-line">
+                                <!-- background-color -->
+                            </div>
+                            <div class="prod-txt-rating-text">
+                                <span>5 отзывов</span>
+                            </div>
+                        </div>
+                        <div class="prod-txt-size">
+                            <div class="prod-txt-size-text">
+                                <span>Размер</span>
+                            </div>
+                            <div class="prod-txt-size-btns">
+                                <div class="prod-txt-size-button"><span>XS</span></div>
+                                <div class="prod-txt-size-button prod-txt-size-button-active"><span>L</span></div>
+                                <div class="prod-txt-size-button"><span>XL</span></div>
+                            </div>
+                        </div>
+                        <div class="prod-txt-color">
+                            <div class="prod-txt-color-text">
+                                <span>Цвет</span>
+                            </div>
+                            <div class="prod-txt-color-btns">
+                                <div class="prod-txt-color-button"><div class="prod-txt-color-button-in"></div></div>
+                                <div class="prod-txt-color-button prod-txt-color-button-active"><div class="prod-txt-color-button-in"></div></div>
+                                <div class="prod-txt-color-button"><div class="prod-txt-color-button-in"></div></div>
+                            </div>
+                        </div>
+                        <div class="card-btns-rowview prod-txt-card-btns-rowview">
+                            <div class="card-btns-rowview-counter prod-txt-card-btns-rowview-counter">
+                                <div class="minusss m-p-item">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-btns-rowview-counter-num">
+                                    <span class="card-btns-rowview-counter-num-txt">1</span>
+                                </div>
+                                <div class="plusss m-p-item">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                            <div class="add-to-cart prod-txt-add-to-cart prod-txt-add-to-cart-not-active">
+                                <span>Добавить в корзину</span>
+                            </div>
+                            <div class="add-to-fav prod-txt-add-to-fav">
+                                <!-- background-image -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-info-box">
+                    <div class="prod-info">
+                        <div class="prod-info-headers-desktop">
+                            <div class="prod-info-header-desktop prod-description prod-info-header-active"><span>Описание</span></div>
+                            <div class="prod-info-header-desktop prod-more-info"><span>Дополнительная информация</span></div>
+                            <div class="prod-info-header-desktop prod-reviews"><span>Отзывы (<span class="prod-info-header-revs-count">5</span>)</span></div>
+                        </div>
+                        <div class="prod-info-text">
+                            <div class="text-description prod-info-text-item prod-info-text-item-visible">5 парных тактильных следочков. Из них можно выстраивать массажную дорожку, тем самым развивать не только ручки, но и ножки.  Такие игры способствуют правильному формированию стопы малыша, является отличным средством профилактики плоскостопия и расслабления, укрепляют своды стоп ребенка. Дорожка развивает тактильные ощущения, координацию, моторику.</div> 
+                            <div class="text-more-info prod-info-text-item">
+                                <div class="more-info-sizes more-info-item">
+                                    <div class="more-info-sizes-header more-info-header">
+                                        <span>Размеры:</span>
+                                    </div>
+                                    <div class="more-info-sizes-text more-info-item-text">
+                                        <span>10,5 x 100 x 10,5 см</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-weight more-info-item">
+                                    <div class="more-info-weight-header more-info-header">
+                                        <span>Вес:</span>
+                                    </div>
+                                    <div class="more-info-weight-text more-info-item-text">
+                                        <span>10,54 кг</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-availablity more-info-item">
+                                    <div class="more-info-availablity-header more-info-header">
+                                        <span>В наличии:</span>
+                                    </div>
+                                    <div class="more-info-availablity-text more-info-item-text">
+                                        <span>10 шт</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-other more-info-item">
+                                    <div class="more-info-other-header more-info-header">
+                                        <span>Другое:</span>
+                                    </div>
+                                    <div class="more-info-other-text more-info-item-text">
+                                        <span>Какая-либо еще информация, которая может быть полезна</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-other more-info-item">
+                                    <div class="more-info-other-header more-info-header">
+                                        <span>Другое:</span>
+                                    </div>
+                                    <div class="more-info-other-text more-info-item-text">
+                                        <span>Какая-либо еще информация, которая может быть полезна</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-other more-info-item">
+                                    <div class="more-info-other-header more-info-header">
+                                        <span>Другое:</span>
+                                    </div>
+                                    <div class="more-info-other-text more-info-item-text">
+                                        <span>Какая-либо еще информация, которая может быть полезна</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-other more-info-item">
+                                    <div class="more-info-other-header more-info-header">
+                                        <span>Другое:</span>
+                                    </div>
+                                    <div class="more-info-other-text more-info-item-text">
+                                        <span>Какая-либо еще информация, которая может быть полезна</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-other more-info-item">
+                                    <div class="more-info-other-header more-info-header">
+                                        <span>Другое:</span>
+                                    </div>
+                                    <div class="more-info-other-text more-info-item-text">
+                                        <span>Какая-либо еще информация, которая может быть полезна</span>
+                                    </div>
+                                </div>
+                                <div class="more-info-other more-info-item">
+                                    <div class="more-info-other-header more-info-header">
+                                        <span>Другое:</span>
+                                    </div>
+                                    <div class="more-info-other-text more-info-item-text">
+                                        <span>Какая-либо еще информация, которая может быть полезна</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-reviews prod-info-text-item">
+                                <div class="left-reviews-box">
+                                    <div class="left-review">
+                                        <div class="left-review-head-box">
+                                            <div class="left-review-info">
+                                                <div class="left-review-author">
+                                                    <span>Марат Игнатов</span>
+                                                </div>
+                                                <div class="left-review-date">
+                                                    <span>19.12.2023</span>
+                                                </div>
+                                            </div>
+                                            <div class="left-review-rating">
+                                                <!-- background-image -->
+                                            </div>
+                                        </div>
+                                        <div class="left-review-txt">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                        </div>
+                                    </div>
+                                    <div class="left-review">
+                                        <div class="left-review-head-box">
+                                            <div class="left-review-info">
+                                                <div class="left-review-author">
+                                                    <span>Марат Игнатов</span>
+                                                </div>
+                                                <div class="left-review-date">
+                                                    <span>19.12.2023</span>
+                                                </div>
+                                            </div>
+                                            <div class="left-review-rating">
+                                                <!-- background-image -->
+                                            </div>
+                                        </div>
+                                        <div class="left-review-txt">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                        </div>
+                                    </div>
+                                    <div class="left-review">
+                                        <div class="left-review-head-box">
+                                            <div class="left-review-info">
+                                                <div class="left-review-author">
+                                                    <span>Марат Игнатов</span>
+                                                </div>
+                                                <div class="left-review-date">
+                                                    <span>19.12.2023</span>
+                                                </div>
+                                            </div>
+                                            <div class="left-review-rating">
+                                                <!-- background-image -->
+                                            </div>
+                                        </div>
+                                        <div class="left-review-txt">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                        </div>
+                                    </div>
+                                    <div class="left-review">
+                                        <div class="left-review-head-box">
+                                            <div class="left-review-info">
+                                                <div class="left-review-author">
+                                                    <span>Марат Игнатов</span>
+                                                </div>
+                                                <div class="left-review-date">
+                                                    <span>19.12.2023</span>
+                                                </div>
+                                            </div>
+                                            <div class="left-review-rating">
+                                                <!-- background-image -->
+                                            </div>
+                                        </div>
+                                        <div class="left-review-txt">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                        </div>
+                                    </div>
+                                    <form action="" class="write-review">
+                                        <div class="write-review-header">
+                                            <span>Написать отзыв</span>
+                                        </div>
+                                        <div class="write-review-author-info">
+                                            <div class="write-review-name-box write-review-author-info-box">
+                                                <div class="write-review-name-header write-review-author-info-header">
+                                                    <span>Имя</span>
+                                                </div>
+                                                <input type="text" placeholder="Иван Иванов" class="write-review-name-input write-review-author-info-input">
+                                            </div>
+                                            <div class="write-review-email-box write-review-author-info-box">
+                                                <div class="write-review-name-header write-review-author-info-header">
+                                                    <span>Электронная почта</span>
+                                                </div>
+                                                <input type="text" placeholder="email@mail.ru" class="write-review-email-input write-review-author-info-input">
+                                            </div>
+                                        </div>
+                                        <div class="write-review-rating">
+                                            <div class="write-review-rating-header">
+                                                <span>Рейтинг</span>
+                                            </div>
+                                            <div class="write-review-rating-stars">
+                                                <div class="write-review-rating-star"></div>
+                                                <div class="write-review-rating-star"></div>
+                                                <div class="write-review-rating-star"></div>
+                                                <div class="write-review-rating-star"></div>
+                                                <div class="write-review-rating-star"></div>
+                                            </div>
+                                        </div>
+                                        <div class="write-review-area-box">
+                                            <div class="write-review-area-header">
+                                                <span>Ваш отзыв</span>
+                                            </div>
+                                            <textarea class="write-review-area-txt" required type="text" placeholder="Ваш отзыв..."></textarea>
+                                        </div>
+                                        <button type="submit" class="write-review-button">
+                                            <span>Отправить</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="maybe-like">
+                    <span><span>Вам может понравиться:</span></span>
+                </div>
+                <div class="home-cards prod-home-cards">
+                    <div class="home-cards-item prod-home-cards-item card-one">
+                        <div class="home-cards-item-img card-one-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-one-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-one-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item prod-home-cards-item card-two">
+                        <div class="home-cards-item-img card-two-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-two-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-two-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item prod-home-cards-item card-three">
+                        <div class="home-cards-item-img card-three-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-three-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-three-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item prod-home-cards-item card-four">
+                        <div class="home-cards-item-img card-four-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-four-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-four-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                </div>
+                <div class="home-cards-button prod-home-cards-button">
+                    <span>Показать ещё</span>
+                </div>
+            </section>
+            <section class="prod-mobile-wrapper">
+                <div class="prod-path">
+                    <div class="prod-path-box">
+                        <div class="prod-path-box-items">
+                            <div class="prod-path-box-home prod-path-box-item">
+                                <span><a href="index.html">Главная</a></span>
+                            </div>
+                            <div class="prod-path-box-arrow">
+                                <!-- background-image -->
+                            </div>
+                            <div class="prod-path-box-catalog prod-path-box-item">
+                                <span><a href="products-list.html">Каталог</a></span>
+                            </div>
+                            <div class="prod-path-box-arrow">
+                                <!-- background-image -->
+                            </div>
+                            <div class="prod-path-box-tactile prod-path-box-item">
+                                <span><a href="product.html">Тактильная дорожка "Следы", 5 пар. Сенсорный коврик</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-wrapper">
+                    <div class="big-photo" style="background-image: url('./img/big-photo.jpg')">
+                        <!-- background-image -->
+                    </div>
+                    <div class="splide-mobile splide mini-photoes">
+                        <div class="splide__track">
+                            <ul class="splide__list" style="transition: none;">
+                                <li class="splide__slide mini-photoes-slide slide slide-1"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-2"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-3"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-4"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-5"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-6"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-7"></li>
+                                <li class="splide__slide mini-photoes-slide slide slide-8"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prod-txt-box">
+                        <div class="prod-txt-header">
+                            <span>Тактильная дорожка "Следы", 5 пар. Сенсорный коврик</span>
+                        </div>
+                        <div class="prod-price-rating-box">
+                            <div class="prod-txt-price">
+                                <span>3 909 ₽</span>
+                            </div>
+                            <div class="prod-txt-rating">
+                                <div class="prod-txt-rating-stars">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="prod-txt-rating-line">
+                                    <!-- background-color -->
+                                </div>
+                                <div class="prod-txt-rating-text">
+                                    <span>5 отзывов</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-btns-rowview prod-txt-card-btns-rowview">
+                            <div class="card-btns-rowview-counter prod-txt-card-btns-rowview-counter">
+                                <div class="minusss m-p-item">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-btns-rowview-counter-num">
+                                    <span class="card-btns-rowview-counter-num-txt">1</span>
+                                </div>
+                                <div class="plusss m-p-item">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                            <div class="add-to-cart prod-txt-add-to-cart prod-txt-add-to-cart-mobile prod-txt-add-to-cart-mobile-not-active prod-txt-add-to-cart-not-active">
+                                <span>В корзину</span>
+                            </div>
+                            <div class="add-to-fav prod-txt-add-to-fav prod-txt-add-to-fav-mobile">
+                                <!-- background-image -->
+                            </div>
+                        </div>
+                        <div class="prod-txt-size-color-box">
+                            <div class="prod-txt-size">
+                                <div class="prod-txt-size-text">
+                                    <span>Размер</span>
+                                </div>
+                                <div class="prod-txt-size-btns">
+                                    <div class="prod-txt-size-button"><span>XS</span></div>
+                                    <div class="prod-txt-size-button prod-txt-size-button-active"><span>L</span></div>
+                                    <div class="prod-txt-size-button"><span>XL</span></div>
+                                </div>
+                            </div>
+                            <div class="prod-txt-color">
+                                <div class="prod-txt-color-text">
+                                    <span>Цвет</span>
+                                </div>
+                                <div class="prod-txt-color-btns">
+                                    <div class="prod-txt-color-button"><div class="prod-txt-color-button-in"></div></div>
+                                    <div class="prod-txt-color-button prod-txt-color-button-active"><div class="prod-txt-color-button-in"></div></div>
+                                    <div class="prod-txt-color-button"><div class="prod-txt-color-button-in"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-info-box">
+                        <div class="prod-info">
+                            <div class="prod-info-headers">
+                                <div class="prod-info-header-container">
+                                    <div class="prod-info-header prod-description prod-info-header-mobile-active"><span>Описание</span></div>
+                                    <div class="prod-info-header-arrow prod-info-header-arrow-opened" style="background-image: url('./img/info-arrow-up.svg'); transform: rotate(180deg);">
+                                        <!-- background-image -->
+                                    </div>
+                                </div>
+                                <div class="prod-info-text-mobile-container prod-info-text-mobile-container-one opened">
+                                    <div class="prod-info-text-mobile-container-underbox"  style="min-height: 0;">
+                                        <div>5 парных тактильных следочков. Из них можно выстраивать массажную дорожку, тем самым развивать не только ручки, но и ножки.  Такие игры способствуют правильному формированию стопы малыша, является отличным средством профилактики плоскостопия и расслабления, укрепляют своды стоп ребенка. Дорожка развивает тактильные ощущения, координацию, моторику.</div>
+                                    </div>
+                                </div>
+                                <div class="prod-info-header-container">
+                                    <div class="prod-info-header prod-more-info"><span>Доп. информация</span></div>
+                                    <div class="prod-info-header-arrow">
+                                        <!-- background-image -->
+                                    </div>
+                                </div>
+                                <div class="prod-info-text-mobile-container prod-info-text-mobile-container-two">
+                                    <div class="prod-info-text-mobile-container-underbox"  style="min-height: 0;">
+                                        <div class="text-more-info">
+                                            <div class="more-info-sizes more-info-item">
+                                                <div class="more-info-sizes-header more-info-header">
+                                                    <span>Размеры:</span>
+                                                </div>
+                                                <div class="more-info-sizes-text more-info-item-text">
+                                                    <span>10,5 x 100 x 10,5 см</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-weight more-info-item">
+                                                <div class="more-info-weight-header more-info-header">
+                                                    <span>Вес:</span>
+                                                </div>
+                                                <div class="more-info-weight-text more-info-item-text">
+                                                    <span>10,54 кг</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-availablity more-info-item">
+                                                <div class="more-info-availablity-header more-info-header">
+                                                    <span>В наличии:</span>
+                                                </div>
+                                                <div class="more-info-availablity-text more-info-item-text">
+                                                    <span>10 шт</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-other more-info-item">
+                                                <div class="more-info-other-header more-info-header">
+                                                    <span>Другое:</span>
+                                                </div>
+                                                <div class="more-info-other-text more-info-item-text">
+                                                    <span>Какая-либо еще информация, которая может быть полезна</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-other more-info-item">
+                                                <div class="more-info-other-header more-info-header">
+                                                    <span>Другое:</span>
+                                                </div>
+                                                <div class="more-info-other-text more-info-item-text">
+                                                    <span>Какая-либо еще информация, которая может быть полезна</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-other more-info-item">
+                                                <div class="more-info-other-header more-info-header">
+                                                    <span>Другое:</span>
+                                                </div>
+                                                <div class="more-info-other-text more-info-item-text">
+                                                    <span>Какая-либо еще информация, которая может быть полезна</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-other more-info-item">
+                                                <div class="more-info-other-header more-info-header">
+                                                    <span>Другое:</span>
+                                                </div>
+                                                <div class="more-info-other-text more-info-item-text">
+                                                    <span>Какая-либо еще информация, которая может быть полезна</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-other more-info-item">
+                                                <div class="more-info-other-header more-info-header">
+                                                    <span>Другое:</span>
+                                                </div>
+                                                <div class="more-info-other-text more-info-item-text">
+                                                    <span>Какая-либо еще информация, которая может быть полезна</span>
+                                                </div>
+                                            </div>
+                                            <div class="more-info-other more-info-item">
+                                                <div class="more-info-other-header more-info-header">
+                                                    <span>Другое:</span>
+                                                </div>
+                                                <div class="more-info-other-text more-info-item-text">
+                                                    <span>Какая-либо еще информация, которая может быть полезна</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prod-info-header-container">
+                                    <div class="prod-info-header prod-reviews"><span>Отзывы (<span class="prod-info-header-revs-count" style="transition: .05s;">5</span>)</span></div>
+                                    <div class="prod-info-header-arrow">
+                                        <!-- background-image -->
+                                    </div>
+                                </div>
+                                <div class="prod-info-text-mobile-container prod-info-text-mobile-container-three">
+                                    <div class="prod-info-text-mobile-container-underbox"  style="min-height: 0;">
+                                        <div class="left-reviews-box">
+                                            <div class="left-review">
+                                                <div class="left-review-head-box">
+                                                    <div class="left-review-info">
+                                                        <div class="left-review-author">
+                                                            <span>Марат Игнатов</span>
+                                                        </div>
+                                                        <div class="left-review-date">
+                                                            <span>19.12.2023</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="left-review-rating">
+                                                        <!-- background-image -->
+                                                    </div>
+                                                </div>
+                                                <div class="left-review-txt">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                                </div>
+                                            </div>
+                                            <div class="left-review">
+                                                <div class="left-review-head-box">
+                                                    <div class="left-review-info">
+                                                        <div class="left-review-author">
+                                                            <span>Марат Игнатов</span>
+                                                        </div>
+                                                        <div class="left-review-date">
+                                                            <span>19.12.2023</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="left-review-rating">
+                                                        <!-- background-image -->
+                                                    </div>
+                                                </div>
+                                                <div class="left-review-txt">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                                </div>
+                                            </div>
+                                            <div class="left-review">
+                                                <div class="left-review-head-box">
+                                                    <div class="left-review-info">
+                                                        <div class="left-review-author">
+                                                            <span>Марат Игнатов</span>
+                                                        </div>
+                                                        <div class="left-review-date">
+                                                            <span>19.12.2023</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="left-review-rating">
+                                                        <!-- background-image -->
+                                                    </div>
+                                                </div>
+                                                <div class="left-review-txt">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                                </div>
+                                            </div>
+                                            <div class="left-review">
+                                                <div class="left-review-head-box">
+                                                    <div class="left-review-info">
+                                                        <div class="left-review-author">
+                                                            <span>Марат Игнатов</span>
+                                                        </div>
+                                                        <div class="left-review-date">
+                                                            <span>19.12.2023</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="left-review-rating">
+                                                        <!-- background-image -->
+                                                    </div>
+                                                </div>
+                                                <div class="left-review-txt">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ligula, eget molestie ante gravida eu. Nunc et dictum mauris, at interdum ipsum. Curabitur id ornare elit, sed auctor odio. Phasellus et accumsan ipsum. Nullam in urna vitae orci auctor dapibus. Quisque sed accumsan tortor. Vivamus leo massa, laoreet et ex non, vehicula feugiat lacus.
+                                                </div>
+                                            </div>
+                                            <form action="" class="write-review">
+                                                <div class="write-review-header">
+                                                    <span>Написать отзыв</span>
+                                                </div>
+                                                <div class="write-review-author-info">
+                                                    <div class="write-review-name-box write-review-author-info-box">
+                                                        <div class="write-review-name-header write-review-author-info-header">
+                                                            <span>Имя</span>
+                                                        </div>
+                                                        <input type="text" placeholder="Иван Иванов" class="write-review-name-input write-review-author-info-input">
+                                                    </div>
+                                                    <div class="write-review-email-box write-review-author-info-box">
+                                                        <div class="write-review-name-header write-review-author-info-header">
+                                                            <span>Электронная почта</span>
+                                                        </div>
+                                                        <input type="text" placeholder="email@mail.ru" class="write-review-email-input write-review-author-info-input">
+                                                    </div>
+                                                </div>
+                                                <div class="write-review-rating">
+                                                    <div class="write-review-rating-header">
+                                                        <span>Рейтинг</span>
+                                                    </div>
+                                                    <div class="write-review-rating-stars">
+                                                        <div class="write-review-rating-star"></div>
+                                                        <div class="write-review-rating-star"></div>
+                                                        <div class="write-review-rating-star"></div>
+                                                        <div class="write-review-rating-star"></div>
+                                                        <div class="write-review-rating-star"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="write-review-area-box">
+                                                    <div class="write-review-area-header">
+                                                        <span>Ваш отзыв</span>
+                                                    </div>
+                                                    <textarea class="write-review-area-txt" required type="text" placeholder="Ваш отзыв..."></textarea>
+                                                </div>
+                                                <button type="submit" class="write-review-button">
+                                                    <span>Отправить</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="maybe-like">
+                    <span><span>Вам может понравиться:</span></span>
+                </div>
+                <div class="home-cards prod-home-cards">
+                    <div class="home-cards-item card-one">
+                        <div class="home-cards-item-img card-one-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-one-cart-mobile">
+                                    <span class="card-one-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-one-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-one">
+                        <div class="home-cards-item-img card-one-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-one-cart-mobile">
+                                    <span class="card-one-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-one-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                </div>
+                <div class="home-cards-button prod-home-cards-button">
+                    <span>Показать ещё</span>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="footer-container">
+                <div class="footer-underbox-one">
+                    <div class="footer-column-one">
+                        <div class="footer-header">
+                            <span>MyDirigible</span>
+                        </div>
+                        <div class="footer-email">
+                            <span>info@mydirigible.ru</span>
+                        </div>
+                        <div class="footer-address">
+                            Петрозаводск, Российская Федерация
+                        </div>
+                    </div>
+                    <div class="footer-items-column">
+                        <div class="footer-items-column-header">
+                            <span>Ссылки</span>
+                        </div>
+                        <div class="footer-items-column-item-box">
+                            <div class="footer-items-column-item">
+                                <a href="">Главная</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Отзывы</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">О нас</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-items-column footer-items-column-two">
+                        <div class="footer-items-column-header">
+                            <span>Помощь</span>
+                        </div>
+                        <div class="footer-items-column-item-box">
+                            <div class="footer-items-column-item">
+                                <a href="">Оплата</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Отмена и возврат</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Политика конфиденциальности</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Доставка</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column-four">
+                        <div class="footer-items-column-header">
+                            <span>Рассылка</span>
+                        </div>
+                        <form action="" class="footer-input-box">
+                            <input type="text" class="footer-input-area" placeholder="example@mail.ru">
+                            <button type="submit" class="footer-input-btn">
+                                <span>Подписаться</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-underbox-two">
+                    <span>2023 MyDirigible. Все права защищены</span>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Splide('.splide', {
+          type: 'slide',
+          height: '550px',
+          width: '80px',
+          autoplay: false,
+          pagination: false,
+          arrows: false,
+          cover: false,
+          perPage: 5,
+          perMove: 1,
+          speed: 250,
+          interval: 0,
+          easing: 'ease-in-out',
+          pauseOnHover: false,
+          direction: 'ttb',
+          gap: '32px',
+          wheel: true,
+          omitEnd: true,
+          drag: 'free',
+          autoWidth: true,
+          noDrag: true,
+          flickPower: 100,
+          waitForTransition: false
+        }).mount();
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+        new Splide('.splide-mobile', {
+          type: 'slide',
+          height: '16vw',
+          width: '90vw',
+          autoplay: false,
+          pagination: false,
+          arrows: false,
+          cover: false,
+          perPage: 4,
+          direction: 'ltr',
+          gap: '3.2vw',
+          drag: 'free',
+          autoWidth: true,
+          noDrag: true,
+          flickPower: 100,
+          waitForTransition: false
+        }).mount();
+      });
+    </script>
+    <script type="text/javascript" src="./js/header-script.js"></script>
+    <script type="text/javascript" src="./js/product-script.js"></script>
+    <script type="text/javascript" src="./js/index-script.js"></script>
+</body>
+</html>

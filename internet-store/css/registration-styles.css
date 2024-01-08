@@ -1,0 +1,385 @@
+.registration-box {
+  margin: 140px auto 230px auto;
+  padding: 64px;
+  border: 1px solid #9f9f9f;
+  border-radius: 10px;
+  width: 628px;
+  height: 831px;
+  background-color: rgba(221,244,244,0.4);
+}
+.authorization-box {
+  height: 920px;
+}
+.registration-underbox {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+  .registration-header {
+    font-size: 36px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+  }
+  .registration-inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+    .registration-input-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+      .registration-input-header {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        user-select: none;
+      }
+      .registration-input-area-box {
+        height: 75px;
+      }
+      .registration-input-area {
+        width: 100%;
+        height: 75px;
+        border: #9f9f9f 1px solid;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 26px 30px 25px 30px;
+        top: 0;
+        left: 0;
+      }
+      .registration-pass-input-area {
+        padding: 26px 80px 25px 30px;
+      }
+      .registration-input-area-img {
+        position: relative;
+        z-index: 12;
+        top: -47px;
+        left: 445px;
+        cursor: pointer;
+        width: 25px;
+        height: 20px;
+        background-image: url('../img/input-hide-pass.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .05s;
+      }
+      .registration-input-area-img.view {
+        background-image: url('../img/input-shown-pass.svg');
+      }
+    .registration-btn-box {
+      height: 124px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .authorization-btn-box {
+      height: 313px;
+    }
+    .authorization-btn-box-bottom-txt {
+      font-size: 20px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .authorization-socials-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .authorization-btn-box-bottom-txt span a {
+      text-decoration: underline;
+    }
+
+    .forgot-pass-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .remember-me {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      cursor: pointer;
+      height: 24px;
+      user-select: none;
+  }
+  .remember-me-check-lab:hover > .fake{
+      transition: .2s;
+      opacity: 0.6;
+  }
+  .remember-me-check-lab:focus > .fake{
+      transition: .05s;
+      opacity: 0.6;
+      outline: 3px #82B3D3 solid;
+  }
+  .remember-me-check-lab:active > .fake{
+      transition: .05s;
+      opacity: 0.3;
+  }
+  .remember-me-checkboxx {
+      display: none;
+  }
+  .remember-me-fake {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background-color: transparent;
+      position: relative;
+      border: 1px solid #18CDCA;
+  }
+  .remember-me-fake::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/forming-checkbox.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0;
+      transition: .1s;
+  }
+  .remember-me-checkboxx:checked + .remember-me-fake::before {
+      opacity: 1;
+  }
+  .remember-me-check-txt {
+      font-weight: 400;
+      font-size: 20px;
+      color: black;
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+  }
+  .forgot-pass {
+    font-size: 20px;
+    color: #18CDCA;
+    cursor: pointer;
+  }
+  .authorization-social {
+    width: 75px;
+    height: 75px;
+  }
+  .authorization-or {
+    width: 100%;
+    height: 43px;
+  }
+      .registration-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #18CDCA;
+        border-radius: 10px;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        height: 75px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .registration-btn-desc {
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .registration-btn-desc span a {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    
+
+@media screen and (max-width: 1300px) {
+  .registration-box {
+    margin: calc(4.615vw + 80px) auto 11.53846vw auto;
+    padding: calc(64vw / 13);
+    border-radius: calc(10vw / 13);
+    width: calc(628vw / 13);
+    height: calc(831vw / 13);
+  }
+    .registration-header {
+      font-size: calc(36vw / 13);
+      height: calc(44vw / 13);
+    }
+    .registration-inputs-wrapper {
+      gap: calc(25vw / 13);
+    }
+      .registration-input-box {
+        gap: calc(20vw / 13);
+      }
+        .registration-input-header {
+          font-size: calc(20vw / 13);
+        }
+        .registration-input-area-box {
+          height: calc(75vw / 13);
+        }
+        .registration-input-area {
+          height: calc(75vw / 13);
+          border-radius: calc(10vw / 13);
+          font-size: calc(20vw / 13);
+          padding: calc(26vw / 13) calc(30vw / 13) calc(25vw / 13) calc(30vw / 13);
+        }
+        .registration-pass-input-area {
+          padding: calc(26vw / 13) calc(80vw / 13) calc(25vw / 13) calc(30vw / 13);
+        }
+        .registration-input-area-img {
+          top: calc(-47vw / 13);
+          left: calc(445vw / 13);
+          width: calc(25vw / 13);
+          height: calc(20vw / 13);
+        }
+      .registration-btn-box {
+        height: calc(124vw / 13);
+      }
+        .registration-btn {
+          border-radius: calc(10vw / 13);
+          font-size: calc(24vw / 13);
+          height: calc(75vw / 13);
+        }
+        .registration-btn-desc {
+          height: calc(24vw / 13);
+          font-size: calc(20vw / 13);
+        }
+
+
+        .authorization-box {
+          height: calc(920vw / 13);
+        }
+        .authorization-btn-box {
+          height: calc(313vw / 13);
+        }
+        .authorization-btn-box-bottom-txt {
+          font-size: calc(20vw / 13);
+          height: calc(24vw / 13);
+        }
+        .remember-me {
+          height: calc(24vw / 13);
+      }
+      .remember-me-check-lab:focus > .fake{
+          outline: calc(3vw / 13) #82B3D3 solid;
+      }
+      .remember-me-fake {
+          width: calc(20vw / 13);
+          height: calc(20vw / 13);
+          border-radius: calc(3vw / 13);
+      }
+      .remember-me-check-txt {
+          font-size: calc(20vw / 13);
+          margin-left: calc(15vw / 13);
+      }
+      .forgot-pass {
+        font-size: calc(20vw / 13);
+      }
+      .authorization-social {
+        width: calc(75vw / 13);
+        height: calc(75vw / 13);
+      }
+      .authorization-or {
+        height: calc(43vw / 13);
+      }
+}
+
+@media screen and (max-width: 800px) {
+.registration-box {
+  margin: calc(12vw + 80px) auto 12vw auto;
+  padding: 4.4vw 6.4vw 6.4vw 6.4vw;
+  border-radius: 2vw;
+  width: 90vw;
+  height: 125.4vw;
+}
+  .registration-header {
+    font-size: 4.8vw;
+    height: 5.8vw;
+  }
+  .registration-inputs-wrapper {
+    gap: 6.4vw;
+  }
+    .registration-input-box {
+      gap: 3.2vw;
+    }
+      .registration-input-header {
+        font-size: 4vw;
+      }
+      .registration-input-area-box {
+        height: 12vw;
+      }
+      .registration-input-area {
+        height: 12vw;
+        border-radius: 2vw;
+        font-size: 4vw;
+        padding: 3.6vw 6vw 3.6vw 6vw;
+      }
+      .registration-pass-input-area {
+        padding: 3.6vw 17vw 3.6vw 6vw;
+      }
+      .registration-input-area-img {
+        top: -8vw;
+        left: 66.2vw;
+        width: 5vw;
+        height: 4vw;
+      }
+    .registration-btn-box {
+      height: 23.2vw;
+    }
+      .registration-btn {
+        border-radius: 2vw;
+        font-size: 4.8vw;
+        height: 12vw;
+      }
+      .registration-btn-desc {
+        height: 4.8vw;
+        font-size: 4vw;
+      }
+
+
+
+      .authorization-box {
+        height: 137.8vw;
+      }
+      .authorization-btn-box {
+        height: 54.8vw;
+      }
+      .authorization-btn-box-bottom-txt {
+        font-size: 4vw;
+        height: 4.8vw;
+      }
+      .remember-me {
+        height: 4vw;
+    }
+    .remember-me-check-lab:focus > .fake{
+        outline: 0.6vw #82B3D3 solid;
+    }
+    .remember-me-fake {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 0.6vw;
+    }
+    .remember-me-check-txt {
+        font-size: 3.2vw;
+        margin-left: 3vw;
+    }
+    .forgot-pass {
+      font-size: 3.2vw;
+    }
+    .authorization-social {
+      width: 12vw;
+      height: 12vw;
+    }
+    .authorization-or {
+      height: 6.8vw;
+    }
+}

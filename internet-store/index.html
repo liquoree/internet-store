@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dirigible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <style>
+      /* Custom CSS for slider */
+      .splide {
+        margin-top: 80px;
+        max-height: 850px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        max-height: 850px;
+      }
+  
+      .slide {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 3em;
+        color: white;
+        
+      }
+      .splide__track {
+        width: 100%;
+        height: calc(100vh - 80px);
+        max-height: 850px;
+      }
+      .slide.slide-1 {
+        background-color: #3498db;
+      }
+  
+      .slide.slide-2 {
+        background-color: #e74c3c;
+      }
+  
+      .slide.slide-3 {
+        background-color: #2ecc71;
+      }
+      .splide__pagination__page {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #DDF4F4;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .splide__pagination {
+        margin-bottom: 19px;
+        gap: 20px;
+      }
+      /* Customizing active pagination dot */
+      .splide__pagination__page.is-active {
+        background-color: #18cdca;
+      }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="full-wrapper">
+        <main class="main">
+            <div class="full-black" style="transition: opacity .3s"></div>
+            <section class="header-wrapper">
+                <header class="header">
+                    <div class="header-hidden-lines">
+                        
+                    </div>
+                    <a href="index.html">
+                        <div class="header-logo">
+                            <!-- background-image -->
+                        </div>
+                    </a>
+                    <div class="header-options">
+                        <form action="" class="searchh hidden header-option header-hidden-search">
+                            <input type="text" class="search-area" placeholder="Введите название товара, артикул или категорию">
+                            <div class="search-cross">
+                                <!-- background-image -->
+                            </div>
+                        </form>
+                        <div class="header-option active-header-option home"><a href="index.html">Главная</a></div>
+                        <div class="header-option catalog"><a href="catalog.html">Каталог</a></div>
+                        <div class="header-option reviews"><a href="#head-reviews">Отзывы</a></div>
+                        <div class="header-option about"><a href="#about-txtt">О нас</a></div>
+                        <div class="header-option contacts">Контакты</div>
+                    </div>
+                    <div class="header-icons">
+                        <div class="header-icon profile">               <!-- background-image --></div>
+                        <div class="header-icon search">                <!-- background-image --></div>
+                        <div class="header-icon fav">                   <!-- background-image --></div>
+                        <div class="header-icon cart">                  <!-- background-image --></div>
+                    </div>
+                    <div class="hidden-cart">
+                        <!-- background-image -->
+                    </div>
+                    <div class="under-menu-wrapper">
+                        <div class="under-menu" style="min-height: 0;">
+                            <div class="under-menu-header-option active-under-menu-header-option under-menu-home"><a href="index.html">Главная</a></div>
+                            <div class="under-menu-header-option under-menu-catalog"><a href="catalog.html">Каталог</a></div>
+                            <div class="under-menu-header-option under-menu-reviews">Отзывы</div>
+                            <div class="under-menu-header-option under-menu-about">О нас</div>
+                            <div class="under-menu-header-option under-menu-contacts">Контакты</div>
+                            <div class="hidden-divide-line"><!-- background-color --></div>
+                            <div class="under-menu-header-option under-menu-fav">Избранное</div>
+                            <div class="under-menu-header-option under-menu-profile">Профиль</div>
+                            <div class="hidden-divide-line"><!-- background-color --></div>
+                            <form action="" class="searchh under-menu-search">
+                                <input type="text" class="under-menu-search-area search-area" placeholder="Поиск">
+                                <div class="search-icon">
+                                    <!-- background-image -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <section class="splide sliderrr" style="max-height: 850px;">
+                <div class="splide__track ttrack" style="max-height: 850px;">
+                    <ul class="splide__list llist">
+                        <li class="splide__slide slide slide-1 head-image">
+                            <div class="head-banner-wrapper">
+                                <div class="head-banner">
+                                    <div class="head-banner-new">
+                                        Новинка
+                                    </div>
+                                    <div class="head-banner-header">
+                                        Тактильная дорожка “Зима”
+                                    </div>
+                                    <div class="head-banner-text">
+                                        Массажная дорожка из 7 элементов в виде больших сот. Ярко выраженная фактура.
+                                    </div>
+                                    <div class="head-banner-button">
+                                        <span>КУПИТЬ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide slide slide-2 head-image">
+                            <div class="head-banner-wrapper">
+                                <div class="head-banner head-banner-right">
+                                    <div class="head-banner-new">
+                                        Новинка
+                                    </div>
+                                    <div class="head-banner-header">
+                                        Тактильная дорожка “Зима”
+                                    </div>
+                                    <div class="head-banner-text">
+                                        Массажная дорожка из 7 элементов в виде больших сот. Ярко выраженная фактура.
+                                    </div>
+                                    <div class="head-banner-button">
+                                        <span>КУПИТЬ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide slide slide-3 head-image">
+                            <div class="head-banner-wrapper">
+                                <div class="head-banner">
+                                    <div class="head-banner-new">
+                                        Новинка
+                                    </div>
+                                    <div class="head-banner-header">
+                                        Тактильная дорожка “Зима”
+                                    </div>
+                                    <div class="head-banner-text">
+                                        Массажная дорожка из 7 элементов в виде больших сот. Ярко выраженная фактура.
+                                    </div>
+                                    <div class="head-banner-button">
+                                        <span>КУПИТЬ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="new-prods">
+                <h1 class="new-prods-header">
+                    Наши новинки
+                </h1>
+                <div class="home-cards">
+                    <div class="home-cards-item card-one">
+                        <div class="home-cards-item-img card-one-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-one-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-one-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-one-cart-mobile">
+                                    <span class="card-one-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-one-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-two">
+                        <div class="home-cards-item-img card-two-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-two-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-two-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-two-cart-mobile">
+                                    <span class="card-two-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-two-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-three">
+                        <div class="home-cards-item-img card-three-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-three-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-three-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-three-cart-mobile">
+                                    <span class="card-three-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-three-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-four">
+                        <div class="home-cards-item-img card-four-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-four-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-four-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-four-cart-mobile">
+                                    <span class="card-four-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-four-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-five">
+                        <div class="home-cards-item-img card-five-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-five-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-five-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-five-cart-mobile">
+                                    <span class="card-five-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-five-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-six">
+                        <div class="home-cards-item-img card-six-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-six-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-six-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-six-cart-mobile">
+                                    <span class="card-six-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-six-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-seven">
+                        <div class="home-cards-item-img card-seven-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav  card-seven-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-seven-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-seven-cart-mobile">
+                                    <span class="card-seven-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-seven-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                    <div class="home-cards-item card-eight">
+                        <div class="home-cards-item-img card-eight-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="home-cards-item-header">
+                            Тактильная дорожка "Следы", 5 пар. Сенсорный коврик
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="card-fav card-eight-fav">
+                                    <!-- background-image -->
+                                </div>
+                                <div class="card-cart card-eight-cart">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-cards-item-bottom-wrapper-mobile">
+                            <div class="price">
+                                3 909 ₽
+                            </div>
+                            <div class="card-btns">
+                                <div class="to-cart-mobile card-eight-cart-mobile">
+                                    <span class="card-eight-cart-mobile-txt">В корзину</span>
+                                </div>
+                                <div class="to-fav-mobile card-eight-fav-mobile">
+                                    <!-- background-image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower-price">
+                            <span class="lower-price-txt">
+                                -20%
+                            </span>
+                            <!-- position: absolute + background-image + border-radius: 50%-->
+                        </div>
+                    </div>
+                </div>
+                <div class="home-cards-button">
+                    <span>Показать ещё</span>
+                </div>
+            </section>
+            <section class="about-us" id="about-txtt">
+                <div class="about-us-box">
+                    <div class="about-us-header">
+                        <span>Кто мы?</span>
+                    </div>
+                    <div class="about-us-text">
+                    Наша семейная мастерская производит авторские развивающие пособия и игрушки, многие из них разработаны совместно с опытными логопедами и дефектологами.<br><br>
+
+                    Наши игры помогают в изучении цветов, геометрических форм, букв, цифр, способствуют развитию внимания, памяти, речи, дыхания, тактильных ощущений и сенсорного восприятия. <br><br>
+
+                    MyDirigible - это большой ассортимент полезных и уникальных игрушек. Мы производим пособия по развитию речи, различные тактильные кубы, игры по образцу, слоговые круги, тактильные домино и лото, рамки-вкладыши, игры на счёт, игры на дыхание,
+                    тактильные дощечки, дорожки, следочки и много-много всего для Ваших деток.<br><br>
+
+                    Приходите, будем Вам рады!
+
+                    </div>
+                </div>
+            </section>
+            <section class="head-page-catalog">
+                <div class="head-page-catalog-header">
+                    Наш каталог
+                </div>
+                <div class="head-catalog-wrapper">
+                    <a href="products-list.html" class="h-catalog-card h-catalog-card-one">
+                        <div class="h-catalog-card-img h-catalog-card-one-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="h-catalog-card-header">
+                            Тактильные дорожки
+                        </div>
+                    </a>
+                    <a href="products-list.html" class="h-catalog-card h-catalog-card-two">
+                        <div class="h-catalog-card-img h-catalog-card-two-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="h-catalog-card-header">
+                            Развивающие игрушки
+                        </div>
+                    </a>
+                    <a href="products-list.html" class="h-catalog-card h-catalog-card-three">
+                        <div class="h-catalog-card-img h-catalog-card-three-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="h-catalog-card-header">
+                            Тактильные раскраски
+                        </div>
+                    </a>
+                    <a href="products-list.html" class="h-catalog-card h-catalog-card-four">
+                        <div class="h-catalog-card-img h-catalog-card-four-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="h-catalog-card-header">
+                            Все товары
+                        </div>
+                    </a>
+                    <a href="products-list.html" class="h-catalog-card h-catalog-card-five">
+                        <div class="h-catalog-card-img h-catalog-card-five-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="h-catalog-card-header">
+                            Развивающие игрушки
+                        </div>
+                    </a>
+                    <a href="products-list.html" class="h-catalog-card h-catalog-card-six">
+                        <div class="h-catalog-card-img h-catalog-card-six-img">
+                            <!-- background-image -->
+                        </div>
+                        <div class="h-catalog-card-header">
+                            Тактильные раскраски
+                        </div>
+                    </a>
+                </div>
+                <div class="head-catalog-btn">
+                    <span>Показать ещё</span>
+                </div>
+            </section>
+            <section class="head-reviews" id="head-reviews">
+                <div class="slide-header">
+                    Отзывы
+                </div>
+                <div class="slide-wrapper">
+                    <div class="slideee">
+                        <div class="slide__track">
+                            <ul class="slide__slides reviews-list">
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Заказ был выполнен и <br>отправлен очень быстро.<br> Продавец все время на связи.<br> Спасибо.
+                                    </div>
+                                    <div class="review-author">
+                                        Инна
+                                    </div>
+                                </li>
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Очень понравилось, то что и <br>хотела! Аккуратно все<br> упаковано и даже есть<br> сюрприз ! Обязательно буду<br> заказывать ещё и<br> рекомендовать знакомым!
+                                    </div>
+                                    <div class="review-author">
+                                        Elena
+                                    </div>
+                                </li>
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Спасибо продавцу все очень<br> понравилось! Продавец все<br> время на связи. Покупали<br> сенсорное лото - очень<br> добротно сделано. Ребёнку<br> нравится. Спасибо.
+                                    </div>
+                                    <div class="review-author">
+                                        Irena
+                                    </div>
+                                </li>
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Очень приятно было<br> общаться с продавцов! Очень<br> дружелюбно. Все рассказали,<br> подсказали. Спасибо!
+                                    </div>
+                                    <div class="review-author">
+                                        Вероника
+                                    </div>
+                                </li>
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Заказ был выполнен и <br>отправлен очень быстро.<br> Продавец все время на связи.<br> Спасибо.
+                                    </div>
+                                    <div class="review-author">
+                                        Инна
+                                    </div>
+                                </li>
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Очень понравилось, то что и <br>хотела! Аккуратно все<br> упаковано и даже есть<br> сюрприз ! Обязательно буду<br> заказывать ещё и<br> рекомендовать знакомым!
+                                    </div>
+                                    <div class="review-author">
+                                        Elena
+                                    </div>
+                                </li>
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Спасибо продавцу все очень<br> понравилось! Продавец все<br> время на связи. Покупали<br> сенсорное лото - очень<br> добротно сделано. Ребёнку<br> нравится. Спасибо.
+                                    </div>
+                                    <div class="review-author">
+                                        Irena
+                                    </div>
+                                </li>
+                                <li class="slide__slide reviews-item">
+                                    <div class="five-stars">
+                                        <!--background-image -->
+                                    </div>
+                                    <div class="review-text">
+                                        Очень приятно было<br> общаться с продавцов! Очень<br> дружелюбно. Все рассказали,<br> подсказали. Спасибо!
+                                    </div>
+                                    <div class="review-author">
+                                        Вероника
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-wrapper-mobile glide">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides reviews-list">
+                        <li class="glide__slide reviews-item-mobile">
+                            <div class="five-stars-mobile">
+                                <!--background-image -->
+                            </div>
+                            <div class="review-text-mobile">
+                                Заказ был выполнен и отправлен очень быстро. Продавец все время на связи. Спасибо.
+                            </div>
+                            <div class="review-author-mobile">
+                                Инна
+                            </div>
+                        </li>
+                        <li class="glide__slide reviews-item-mobile">
+                            <div class="five-stars-mobile">
+                                <!--background-image -->
+                            </div>
+                            <div class="review-text-mobile">
+                                Очень понравилось, то что и хотела! Аккуратно все упаковано и даже есть сюрприз ! Обязательно буду заказывать ещё и рекомендовать знакомым!
+                            </div>
+                            <div class="review-author-mobile">
+                                Elena
+                            </div>
+                        </li>
+                        <li class="glide__slide reviews-item-mobile">
+                            <div class="five-stars-mobile">
+                                <!--background-image -->
+                            </div>
+                            <div class="review-text-mobile">
+                                Спасибо продавцу все очень<br> понравилось! Продавец все<br> время на связи. Покупали<br> сенсорное лото - очень<br> добротно сделано. Ребёнку<br> нравится. Спасибо.
+                            </div>
+                            <div class="review-author-mobile">
+                                Irena
+                            </div>
+                        </li>
+                        <li class="glide__slide reviews-item-mobile">
+                            <div class="five-stars-mobile">
+                                <!--background-image -->
+                            </div>
+                            <div class="review-text-mobile">
+                                Очень приятно было<br> общаться с продавцов!<br> Очень дружелюбно. Все<br> рассказали, подсказали.<br> Спасибо!
+                            </div>
+                            <div class="review-author-mobile">
+                                Вероника
+                            </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
+                  </div>
+            </section>
+            <section class="find-inst">
+                <div class="find-inst-header-one">
+                    Подписывайтесь на нас в Instagram
+                </div>
+                <div class="find-inst-header-two">
+                    @mydirigible
+                </div>
+                <!-- background-image -->
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="footer-container">
+                <div class="footer-underbox-one">
+                    <div class="footer-column-one">
+                        <div class="footer-header">
+                            <span>MyDirigible</span>
+                        </div>
+                        <div class="footer-email">
+                            <span>info@mydirigible.ru</span>
+                        </div>
+                        <div class="footer-address">
+                            Петрозаводск, Российская Федерация
+                        </div>
+                    </div>
+                    <div class="footer-items-column">
+                        <div class="footer-items-column-header">
+                            <span>Ссылки</span>
+                        </div>
+                        <div class="footer-items-column-item-box">
+                            <div class="footer-items-column-item">
+                                <a href="">Главная</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Отзывы</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">О нас</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-items-column footer-items-column-two">
+                        <div class="footer-items-column-header">
+                            <span>Помощь</span>
+                        </div>
+                        <div class="footer-items-column-item-box">
+                            <div class="footer-items-column-item">
+                                <a href="">Оплата</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Отмена и возврат</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Политика конфиденциальности</a>
+                            </div>
+                            <div class="footer-items-column-item">
+                                <a href="">Доставка</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column-four">
+                        <div class="footer-items-column-header">
+                            <span>Рассылка</span>
+                        </div>
+                        <form action="" class="footer-input-box">
+                            <input type="text" class="footer-input-area" placeholder="example@mail.ru">
+                            <button type="submit" class="footer-input-btn">
+                                <span>Подписаться</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-underbox-two">
+                    <span>2023 MyDirigible. Все права защищены</span>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Splide('.splide', {
+            type: 'slide',
+            height: '850px',
+            width: '100%',
+            autoplay: true,
+            pagination: true,
+            arrows: false,
+            cover: false,
+            perPage: 1,
+            gap: 0,
+            speed: 1000,
+            interval: 5000,
+            easing: 'ease-in-out',
+            pauseOnHover: false,
+            rewind: true,
+          }).mount();
+        });
+      </script>
+    <script type="text/javascript" src="./js/header-script.js"></script>
+    <script type="text/javascript" src="./js/index-script.js"></script>
+</body>
+</html>

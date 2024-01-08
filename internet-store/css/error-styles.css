@@ -1,0 +1,91 @@
+.header-wrapper {
+  background-color: #ddf4f4;
+}
+.error-block {
+  height: calc(80vh);
+  margin-top: 80px;
+  padding-top: 100px;
+  margin-bottom: 400px;
+  user-select: none;
+}
+.four-zero-four {
+  margin: 0 auto 32px auto;
+  font-size: 128px;
+  color: #18CDCA;
+  font-weight: 600;
+  line-height: 156px;
+  width: fit-content;
+}
+.error-txt {
+  font-size: 36px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  margin: 0 auto 64px auto;
+  line-height: 44px;
+}
+.error-btn {
+  font-size: 36px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #18CDCA;
+  width: 310px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.error-btn:hover {
+  background-color: #71e7e5;
+}
+
+@media screen and (max-width: 1300px) {
+  .error-block {
+    height: calc(80vh);
+    padding-top: calc(100vw / 13);
+    margin-bottom: calc(400vw / 13);
+  }
+  .four-zero-four {
+    margin: 0 auto calc(32vw / 13) auto;
+    font-size: calc(128vw / 13);
+    line-height: calc(156vw / 13);
+  }
+  .error-txt {
+    font-size: calc(36vw / 13);
+    margin: 0 auto calc(64vw / 13) auto;
+    line-height: calc(44vw / 13);
+  }
+  .error-btn {
+    font-size: calc(36vw / 13);
+    width: calc(310vw / 13);
+    height: calc(80vw / 13);
+    border-radius: calc(10vw / 13);
+  }
+}
+@media screen and (max-width: 800px) {
+  .error-block {
+    height: calc(70vh);
+    padding-top: 12vw;
+    margin-bottom: 0;
+  }
+  .four-zero-four {
+    margin: 0 auto 5vw auto;
+    font-size: 19.2vw;
+    line-height: 23.4vw;
+  }
+  .error-txt {
+    font-size: 4vw;
+    margin: 0 auto 5vw auto;
+    line-height: 4.8vw;
+  }
+  .error-btn {
+    font-size: 4vw;
+    width: 42.6vw;
+    height: 12vw;
+    border-radius: 2vw;
+  }
+}
